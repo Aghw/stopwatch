@@ -77,65 +77,67 @@ function cleanLap() {
       laps.pop();
     }
 }
-//
-//
-//
-// function drawList() {
-//   // This func builds a list laps
-//   // prints to HTML
-//   // var ul = document.createElement("ul");
-//   var ul = document.querySelector("#lapList");
-//
-//   //clear lap
-//   clearLap()
-//   let lapCounter = 0;
-//
-//   for (let laptime of laps) {
-//     let text = `Lap-${++lapCounter}  ${laptime}`;
-//     var ltime = document.createTextNode(text);
-//     var li = document.createElement("li");
-//     li.appendChild(ltime);
-//     ul.appendChild(li);
-//   }
-// }
-//
-//
-// // takes laps of the stopwatch by taking snapshot the interval
-// function stopwatchLap(event) {
-//   event.preventDefault();
-//   // console.log('lap!');
-//
-//   // add the time to array
-//   let laptime = stopwatchTime.innerText;
-//   // console.log(laptime);
-//
-//   // make sure the same time doesn't get laped more than once
-//   if (!laps.includes(laptime)) {
-//     // let lapdata = lapCounter++;
-//     laps.push(laptime);
-//   }
-//
-//   //display laptime
-//   drawList();
-// }
-//
-// // resets the stopwatch time
-// function stopwatchReset(event) {
-//   event.preventDefault();
-//   // console.log('Reset!');
-//
-//   // stop the interval
-//   clearInterval(intervalId);
-//
-//   // reset the time to 0
-//   stopwatchTime.innerText = 0;
-//
-//   //clear lap
-//   clearLap()
-//
-//   //clean lap
-//   cleanLap()
-// }
+
+
+
+function drawList() {
+  // This func builds a list laps
+  // prints to HTML
+  // var ul = document.createElement("ul");
+  var ul = document.querySelector("#lapList");
+
+  //clear lap
+  clearLap()
+  let lapCounter = 0;
+
+  for (let laptime of laps) {
+    let text = `Lap-${++lapCounter}  ${laptime}`;
+    var ltime = document.createTextNode(text);
+    var li = document.createElement("li");
+    li.appendChild(ltime);
+    ul.appendChild(li);
+  }
+}
+
+
+// takes laps of the stopwatch by taking snapshot the interval
+function stopwatchLap(event) {
+  event.preventDefault();
+  // console.log('lap!');
+
+  // add the time to array
+  let laptime = stopwatchTime.innerText;
+  // console.log(laptime);
+
+  // make sure the same time doesn't get laped more than once
+  if (!laps.includes(laptime)) {
+    // let lapdata = lapCounter++;
+    laps.push(laptime);
+  }
+
+  //display laptime
+  drawList();
+}
+
+
+
+// resets the stopwatch time
+function stopwatchReset(event) {
+  event.preventDefault();
+  // console.log('Reset!');
+
+  // stop the interval
+  clearInterval(intervalId);
+
+  // reset the time to 0
+  stopwatchTime.innerText = 0;
+
+  //clear lap
+  clearLap()
+
+  //clean lap
+  cleanLap()
+}
 
 
 // adds a leading zero because humans like them
