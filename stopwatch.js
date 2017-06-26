@@ -68,6 +68,7 @@ function clearLap()
 
 
 function cleanLap() {
+    rawTime = 0;
     //clear lap
     let length = laps.length;
     let i = 0;
