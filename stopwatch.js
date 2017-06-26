@@ -54,29 +54,29 @@ function stopwatchStop(event) {
 
   clearInterval(intervalId);
 }
-//
-//
-// function clearLap()
-// {
-//     var ul = document.querySelector("#lapList");
-//     var orderList = document.querySelectorAll("li");
-//
-//     for(let li of orderList)
-//       ul.removeChild(li);
-//
-// }
-//
-//
-// function cleanLap() {
-//     //clear lap
-//     let length = laps.length;
-//     let i = 0;
-//     lapCounter = 0; // reset the counting of lapcounter
-//
-//     while(i++ < length) {
-//       laps.pop();
-//     }
-// }
+
+
+function clearLap()
+{
+    var ul = document.querySelector("#lapList");
+    var orderList = document.querySelectorAll("li");
+
+    for(let li of orderList)
+      ul.removeChild(li);
+
+}
+
+
+function cleanLap() {
+    //clear lap
+    let length = laps.length;
+    let i = 0;
+    lapCounter = 0; // reset the counting of lapcounter
+
+    while(i++ < length) {
+      laps.pop();
+    }
+}
 //
 //
 //
